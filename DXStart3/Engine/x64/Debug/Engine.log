@@ -1,3 +1,12 @@
 ﻿  pch.cpp
+  CommandQueue.cpp
+  DescriptorHeap.cpp
+  Device.cpp
+  Engine.cpp
   EnginePch.cpp
+  Mesh.cpp
+  RootSignature.cpp
+  Shader.cpp
+  SwapChain.cpp
+  코드를 생성하고 있습니다...
   Engine.vcxproj -> D:\01_Unity\2024GameProgramming\DXStart3\Output\Engine.lib

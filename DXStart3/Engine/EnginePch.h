@@ -11,7 +11,7 @@
 #include <map>
 using namespace std;
 
-#include "d3dx12.h"		// 마소 공식 깃헙에서 다운받아야 함(or 준비된 파일을 전달)
+#include "d3dx12.h"		
 #include <d3d12.h>
 #include <wrl.h>
 #include <d3dcompiler.h>
@@ -43,4 +43,34 @@ using Vec3 = XMFLOAT3;
 using Vec4 = XMFLOAT4;
 using Matrix = XMMATRIX;
 
-void HelloEngine();
+enum
+{
+    SWAP_CHAIN_BUFFER_COUNT = 2
+};
+
+struct WindowInfo
+{
+    HWND hwnd;        // 출력 윈도우
+    int32 width;    // 너비
+    int32 height;    // 높이
+    bool windowed;    // 창모드인지 전체화면인지
+};
+
+struct Vertex
+{
+    Vec3 pos; // 위치값
+    Vec4 color; // 색상값
+};
+
+#define DEVICE          GEngine->GetDevice()->GetDevice()
+#define CMD_LIST        GEngine->GetCmdQueue()->GetCmdList()
+#define ROOT_SIGNATURE GEngine->GetRootSignature()->GetSignature()
+
+// 엔진 클래스를 싱글톤화 시킨다
+extern unique_ptr<class Engine> GEngine;
+
+//void HelloEngine();
+
+// c++에서 -> . 의 차이
+// .은 클래스의 멤버를 직접 접근
+// -> 포인터를 통해서 멤버를 접근
