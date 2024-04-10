@@ -10,11 +10,13 @@ TagManager:
   - BadItem
   - BabyPenguin
   - Fish
+  - Obstacle
+  - Scoring
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - RaySensorExpcetion
   - Water
   - UI
   - 

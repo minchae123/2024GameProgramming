@@ -15,6 +15,7 @@ void Engine::Init(const WindowInfo& wInfo)
     _cmdQueue = make_shared<CommandQueue>();
     _swapChain = make_shared<SwapChain>();
     _descHeap = make_shared<DescriptorHeap>();
+    _rootSignature = make_shared<RootSignature>();
 
     // 각종 장치들의 초기화
     _device->Init();
